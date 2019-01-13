@@ -1,0 +1,69 @@
+
+---------------------------------------------------------------
+
+README file for Core Banking System Project
+
+By : Satyam Sevanya (15CS10040)
+
+NOTE : this file is made for Local User functionalities only
+
+---------------------------------------------------------------
+
+Contents :
+
+-(1)-Machine Setup
+
+-(2)-Code Setup
+
+-(3)-Code Execution
+
+---------------------------------------------------------------
+
+-(1)-Machine Setup
+
+---(i)---Install : Linux-Apache-MySQL-PHP (LAMP) in your machine
+
+	To install LAMP in UBUNTU 16.04, you can refer to this page - 'https://poweruphosting.com/blog/install-lamp-ubuntu/'
+	or you can refer to this video - 'https://www.youtube.com/watch?v=avEDRh8gGGY&feature=youtu.be&list=LLWoHkYw48sXpifkQkwVg04A'
+
+---(ii)---unzip the project folder in '/var/www/html'
+
+---------------------------------------------------------------
+
+-(2)-Code Setup
+
+---(i)---Create MySQL database 'BranchDB' with two tables in it namely 'customer' and 'transaction' as shown below
+
+	customer(int accn,varchar name,varchar sign,varchar bio,varchar addr,int mob,varchar email,int balance)
+
+	transaction(int accn,int amount,int type,int mode,varchar sign,varchar bio,int status,int sent)
+
+---(ii)---Create MySQL database 'CentralServer' with one table in it named 'customer' as shown below
+
+	customer(int accn,varchar name,varchar sign,varchar bio,varchar addr,int mob,varchar email,int balance,int aadhar,varchar pan,int ifsc)
+
+---(iii)---change basic database details like 'db_username', 'db_pass' and 'db_name' details in db.php for client branch in Client folder and db.php for server in Server folder according to your MySQL username, password and respective database names.
+
+---(iv)---change 'serverAddr' and 'myAddr' in db.php for client in client folder as per server machine address and your branch address
+
+---(v)---change 'serverAddr', 'b1_addr', 'b2_addr' and 'b3_addr' for server in server folder as per server machine address and all branche addresses.
+
+----------------------------------------------------------------
+
+-(3)-Code Execution
+
+---(i)---run 'server.php' file in your terminal
+
+---(ii)---run 'branch.php' file in your terminal
+
+---(iii)---open 'localhost' in your web browser -> open project 'localhost/btp' -> get into into the client folder 'localhost/btp/client'-> open home.php 'localhost/btp/client/home.php'
+
+---(iv)---navigate through Open Account to create new accounts in local branch
+
+---(v)---navigate through Local User to perform local transactions
+
+
+----------------------------------------------------------------
+
+
+
